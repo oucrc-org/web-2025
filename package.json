@@ -6,13 +6,16 @@
     "dev": "pnpm -F @web-2025/pages dev",
     "build": "pnpm -r build",
     "start": "pnpm -F @web-2025/pages start",
-    "typecheck": "pnpm -r typecheck"
+    "typecheck": "pnpm -r typecheck",
+    "check": "biome check --write .",
+    "check:ci": "biome ci ."
   },
   "engines": {
     "node": ">=22.17.1",
     "pnpm": ">=10.0.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.1.2",
     "typescript": "^5.8.3"
   }
 }
