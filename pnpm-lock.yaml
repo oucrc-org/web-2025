@@ -7,6 +7,12 @@ settings:
 importers:
 
   .:
+    devDependencies:
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
+
+  apps/pages:
     dependencies:
       '@react-router/node':
         specifier: ^7.7.0

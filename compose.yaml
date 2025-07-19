@@ -1,0 +1,10 @@
+services:
+  pages:
+    build:
+      context: .
+      dockerfile: docker/app-pages.Dockerfile
+      target: production
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
