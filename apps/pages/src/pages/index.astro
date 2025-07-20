@@ -1,18 +1,25 @@
 ---
-
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 ---
 
 <html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-		<link rel="stylesheet" href="/src/styles/tailwind.css" />
-	</head>
-	<body>
-		<h1 class="text-3xl font-bold text-blue-600">Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <link rel="stylesheet" href="/src/styles/tailwind.css" />
+  </head>
+  <body>
+    <div class="min-h-screen flex flex-col">
+      <Header />
+      <main class="flex-grow pt-16">
+        <h1 class="text-3xl font-bold text-blue-600">Astro</h1>
+      </main>
+      <Footer />
+    </div>
+  </body>
 </html>
