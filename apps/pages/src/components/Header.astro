@@ -7,7 +7,9 @@ import hamburger from "../assets/images/header/hamburger.svg";
 ---
 
 <header>
-  <div class="bg-white text-lg flex flex-row h-16 justify-between opacity-90 px-3 shadow-md fixed w-full z-50">
+  <div
+    class="bg-white text-lg flex flex-row h-16 justify-between opacity-90 px-3 shadow-md fixed w-full z-50"
+  >
     <!-- ロゴ -->
     <a href="/" class="m-2 flex flex-row items-center">
       <Image
@@ -29,10 +31,21 @@ import hamburger from "../assets/images/header/hamburger.svg";
     <!-- PC ナビゲーション -->
     <div class="hidden md:flex flex-grow justify-end">
       <nav id="navigation" class="self-center h-full">
-        <a href="/" class="border-b-2 border-white hover:border-divider">ホーム</a>
-        <a href="/articles" class="border-b-2 border-white hover:border-divider">作品紹介</a>
-        <a href="/members" class="border-b-2 border-white hover:border-divider">部員紹介</a>
-        <a href="/join" class="border-b-2 border-white hover:border-divider">入部フォーム</a>
+        <a href="/" class="border-b-2 border-white hover:border-divider">
+          ホーム
+        </a>
+        <a
+          href="/articles"
+          class="border-b-2 border-white hover:border-divider"
+        >
+          作品紹介
+        </a>
+        <a href="/members" class="border-b-2 border-white hover:border-divider">
+          部員紹介
+        </a>
+        <a href="/join" class="border-b-2 border-white hover:border-divider">
+          入部フォーム
+        </a>
       </nav>
     </div>
 
@@ -64,48 +77,59 @@ import hamburger from "../assets/images/header/hamburger.svg";
     <!-- スマホ ナビゲーション -->
     <nav class="self-center h-full">
       <div class="py-5">
-        <a href="/" class="border-b-2 border-white hover:border-divider">ホーム</a>
+        <a href="/" class="border-b-2 border-white hover:border-divider">
+          ホーム
+        </a>
       </div>
       <div class="py-5">
-        <a href="/articles" class="border-b-2 border-white hover:border-divider">作品紹介</a>
+        <a
+          href="/articles"
+          class="border-b-2 border-white hover:border-divider"
+        >
+          作品紹介
+        </a>
       </div>
       <div class="py-5">
-        <a href="/members" class="border-b-2 border-white hover:border-divider">部員紹介</a>
+        <a href="/members" class="border-b-2 border-white hover:border-divider">
+          部員紹介
+        </a>
       </div>
       <div class="py-5">
-        <a href="/join" class="border-b-2 border-white hover:border-divider">入部フォーム</a>
+        <a href="/join" class="border-b-2 border-white hover:border-divider">
+          入部フォーム
+        </a>
       </div>
     </nav>
   </div>
 </header>
 
 <script>
-  const hamburgerBtn = document.getElementById('hamburger-btn');
-  const hamburgerIcon = document.getElementById('hamburger-icon');
-  const closeIcon = document.getElementById('close-icon');
-  const mobileNav = document.getElementById('mobile-nav');
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+  const closeIcon = document.getElementById("close-icon");
+  const mobileNav = document.getElementById("mobile-nav");
 
-  hamburgerBtn?.addEventListener('click', () => {
-    const isOpen = !mobileNav?.classList.contains('hidden');
-    
+  hamburgerBtn?.addEventListener("click", () => {
+    const isOpen = !mobileNav?.classList.contains("hidden");
+
     if (isOpen) {
-      mobileNav?.classList.add('hidden');
-      hamburgerIcon?.classList.remove('hidden');
-      closeIcon?.classList.add('hidden');
+      mobileNav?.classList.add("hidden");
+      hamburgerIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
     } else {
-      mobileNav?.classList.remove('hidden');
-      hamburgerIcon?.classList.add('hidden');
-      closeIcon?.classList.remove('hidden');
+      mobileNav?.classList.remove("hidden");
+      hamburgerIcon?.classList.add("hidden");
+      closeIcon?.classList.remove("hidden");
     }
   });
 
   // モバイルナビのリンクをクリックしたときにメニューを閉じる
-  const mobileNavLinks = mobileNav?.querySelectorAll('a');
-  mobileNavLinks?.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileNav?.classList.add('hidden');
-      hamburgerIcon?.classList.remove('hidden');
-      closeIcon?.classList.add('hidden');
+  const mobileNavLinks = mobileNav?.querySelectorAll("a");
+  mobileNavLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileNav?.classList.add("hidden");
+      hamburgerIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
     });
   });
 </script>
